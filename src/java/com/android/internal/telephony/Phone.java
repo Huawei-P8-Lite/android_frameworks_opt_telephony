@@ -1855,7 +1855,7 @@ public abstract class Phone extends Handler implements PhoneInternalInterface {
         // Only set preferred network types to that which the modem supports
         int modemRaf = getRadioAccessFamily();
         int rafFromType = RadioAccessFamily.getRafFromNetworkType(networkType);
-
+/*
         if (modemRaf == RadioAccessFamily.RAF_UNKNOWN
                 || rafFromType == RadioAccessFamily.RAF_UNKNOWN) {
             Rlog.d(LOG_TAG, "setPreferredNetworkType: Abort, unknown RAF: "
@@ -1869,8 +1869,8 @@ public abstract class Phone extends Handler implements PhoneInternalInterface {
             }
             return;
         }
-
-        int filteredRaf = (rafFromType & modemRaf);
+*/
+        int filteredRaf = (rafFromType);
         int filteredType = RadioAccessFamily.getNetworkTypeFromRaf(filteredRaf);
 
         Rlog.d(LOG_TAG, "setPreferredNetworkType: networkType = " + networkType
